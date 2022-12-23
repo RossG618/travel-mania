@@ -26,14 +26,14 @@ function Header(props) {
 const {messageShow, setMessageShow} = props;
 const {darkMode, setDarkMode} = props;
 
-  // useEffect(() => {
-  //   if (count === 0){
-  //     return null;
-  //   }
-  //   document.title = `You clicked ${count} notifactions`;
-  //    toast.info(`You have ${count} notifacations`);
-  //    toast('Please find them in the notifacations icon above');
-  // }, [])
+  useEffect(count => {
+    if (count === 0){
+      return null;
+    }
+    document.title = `You clicked ${count} notifactions`;
+     toast.info(`You have ${count} notifacations`);
+     toast('Please find them in the notifacations icon above');
+  }, [])
   
   const showOptInfoFav = () => {
     setshowInfoFav(!showInfoFav)
@@ -122,15 +122,15 @@ const {darkMode, setDarkMode} = props;
           <svg onClick={() => setDarkMode(!darkMode)} xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M14 36q-5 0-8.5-3.5T2 24q0-5 3.5-8.5T14 12h20q5 0 8.5 3.5T46 24q0 5-3.5 8.5T34 36Zm0-3h20q3.75 0 6.375-2.625T43 24q0-3.75-2.625-6.375T34 15H14q-3.75 0-6.375 2.625T5 24q0 3.75 2.625 6.375T14 33Zm20.05-3.95q2.1 0 3.575-1.475T39.1 24q0-2.1-1.475-3.575T34.05 18.95q-2.1 0-3.575 1.475T29 24q0 2.1 1.475 3.575t3.575 1.475ZM24 24Z"/></svg>
              } 
             </li>
-            <li style={{"list-style": "none"}}><a href="" className={`${darkMode ? 'text-white': 'text-dark'} gap`} style={{"list-style": "none", "text-decoration": "none"}}>
+            <li style={{"list-style": "none"}}><Link to="/" className={`${darkMode ? 'text-white': 'text-dark'} gap`} style={{"list-style": "none", "text-decoration": "none"}}>
               <FontAwesomeIcon icon={faPhone} className="mx-2"/>Contact
-            </a></li>
-            <li style={{"list-style": "none"}}><a href="" className={`${darkMode ? 'text-white' : 'text-dark'}  gap`} style={{"list-style": "none", "text-decoration": "none"}}>
+            </Link></li>
+            <li style={{"list-style": "none"}}><Link to="/" className={`${darkMode ? 'text-white' : 'text-dark'}  gap`} style={{"list-style": "none", "text-decoration": "none"}}>
               <FontAwesomeIcon icon={faMap}  className="mx-2"/>Locations
-            </a></li>
-            <li style={{"list-style": "none"}}><a href="" className={`${darkMode ? 'text-white' : 'text-dark'}  gap`} style={{"list-style": "none", "text-decoration": "none"}}>
+            </Link></li>
+            <li style={{"list-style": "none"}}><Link to="/" className={`${darkMode ? 'text-white' : 'text-dark'}  gap`} style={{"list-style": "none", "text-decoration": "none"}}>
               <FontAwesomeIcon icon={faClock}  className="mx-2"/>Open Times
-            </a></li>
+            </Link></li>
           </ul>
         </div>
 

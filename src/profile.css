@@ -1,0 +1,97 @@
+:root{
+    --bg-lightgrey: rgb(218, 218, 218);
+}
+/* .bg-grey{
+    background-color: var(--bg-lightgrey);
+} */
+.insta{
+    background: #0099F7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F11712, #0099F7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F11712, #0099F7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+fill: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+.profile-bar img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+@media screen and (max-width:1080px){
+    .profile-bar{
+        padding: 20px !important;
+    }
+    .profile-bar img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .profile-choices{
+    flex-direction: column;
+    }
+    .about-info{
+        margin-bottom: 5rem;
+    }
+    .about-info .btn{
+        align-self: center !important;
+    }
+}
+
+.profile-bar{
+    margin: 1rem 0 0 0 ;
+    border-radius:  20px 20px 0 0 !important;
+}
+
+.info{
+    padding: 0 20px  !important;
+}
+.profile-choices .col p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+p {
+        max-width: '100%';
+        display: '-webkit-box';
+        -webkit-box-orient: 'vertical';
+        -webkit-line-clamp: 1;
+        overflow: 'hidden';
+        text-overflow: 'ellipsis';
+      
+}
+.percentage{
+    background-color: blue !important;
+    background: -webkit-image-set(80%);
+}
+.icon-heading{transform: translate(-25px, 0px);}
+.icon-heading-hist{transform: translate(-30px, 0px);}
+
+.show-history{
+    transition: transform 0.5s ease-in-out;
+    transform: translate(650px, -100px) !important;
+    width: 20% !important;
+}
+.hide-history{
+    transition: transform 0.6s ease-in-out;
+    transform: translate(200px, -100px) scale(0);
+    width: 20% !important;
+}
+.job-history{
+    position: absolute;
+    transition: transform 0.6s ease-in-out;
+}
+
+.job-history-icon{
+
+    transition: transform 0.6s ease-in-out;
+    transform: translate(-50%, 0px);
+}
+.bg-shadow{
+    background-color: black;
+    opacity: 0.8;
+    height: 100vh;
+}
+.dark{
+    background-color: black;
+}

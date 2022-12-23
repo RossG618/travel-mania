@@ -1,0 +1,37 @@
+/* .center{
+    justify-content: center !important;
+    align-items: center !important;
+    
+} */
+.signin-form{
+    width: 100% !important;
+
+}
+@media screen and (min-width: 768px){
+    .signin-form{
+        width: 40% !important;
+    }
+}
+
+/* @media screen and (max-width: 1080px){
+    .signin-form{
+        width: 50% !important;
+    }
+} */
+
+@media screen and (min-width: 1080px){
+    .signin-form{
+        width: 30% !important;
+    }
+} 
+@media screen and (min-width: 1440px){
+    .signin-form{
+        width: 23% !important;
+    }
+}
+.reveal-icon{
+    border-radius: 0 0 0.375rem 0!important;
+}
+.pass-bar{
+    border-radius: 0 0 0 0.375rem !important;
+}

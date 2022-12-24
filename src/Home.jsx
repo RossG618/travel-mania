@@ -188,7 +188,7 @@ export default function Home() {
     </div>
     <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden col">
       <div class="my-3">
-        <h2 class="display-5">Kids fun</h2>
+        <h2 class="display-5">Kids have fun</h2>
         <p class="lead">Children can play together at anytime wether it's in the play ground, Laser tag or at a waterpark.</p>
       </div>
       <img style={{"width":"80%", "height": "35%",}} className="rounded-4 image-adjust" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/10992/b8b237ee-7cfe-4eab-b79b-dac389707899.jpg" alt="img" />

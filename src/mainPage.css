@@ -1,0 +1,130 @@
+/* .App-Hero .btn{
+    font-family: Arial, Helvetica, sans-serif !important;
+} */
+:root{
+    --blood-red: rgb(185, 0, 0);
+
+}
+.bg-blood{
+    background-color: var(--blood-red);
+}
+@font-face {
+    font-family: "nabla";
+    src: url(./fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
+
+    font-family: "bebas";
+    src: url(./fonts/Bebas_Neue.ttf);
+}
+.nabla{
+    font-family: 'nabla';
+}
+*{
+    font-family: Arial, Helvetica, sans-serif ;
+}
+body{
+    z-index: 100;
+}
+.Hero{
+    background: #282c34;
+    height: 100vh;
+}
+.pic1-hero{
+top: -100px;
+right: -170px;
+transform: rotate(29deg) scale(0.5);
+z-index: 33;
+
+}
+.pic2-hero{
+top: 120px;
+right: -150px;
+transform: scale(0.7);
+}
+@media screen and (max-width: 770px){
+    .pic2-hero{
+        display: none;
+    }
+    .pic1-hero{
+        display: none;
+    }
+}
+
+.hero-header{
+    z-index: 33 !important;
+}
+
+.price{
+    transition: all 0.5s;
+}
+
+.pop-tag{
+    color: red  ;
+    top: -18px;
+    transition: all 0.6s;
+    right: -19px;
+}
+.pop-tagDiv:hover .pop-tag{
+    transform: translate(0px, 20px) scale(1.5) rotate(350deg)  !important;
+    transition: all 0.6s;
+}
+
+.pop-tagDiv{
+    transform: scale(1.2) translate(0, 20px);
+    z-index: 33;
+    
+}
+@media screen and (max-width: 1080px){
+    .pic1-hero, .pic2-hero{
+        transform: scale(0.6);
+    }
+    /* .pic1-hero{
+        top: 170px;
+right: 90px;
+} */
+.pic2-hero{
+    top: -160px;
+    right: -90px;
+    display: none;
+    }
+   
+}
+@media screen and (min-width: 1028px){
+    .price:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
+}
+@media screen and (max-width: 770px){
+    .price, .pop-tagDiv{
+        transform: scale(1)
+    }
+}
+@media screen and (min-width: 400px ){
+    .Hero{
+        height: 60%;
+    }
+}
+@media screen and (min-width: 770px ){
+    .Hero{
+        height: 80%;
+    }
+}
+@media screen and (min-width:1080px ){
+    .Hero{
+        height: 35rem;
+    }
+}
+@media screen and (min-width:1442px ){
+    .Hero{
+        height: 40rem ;
+    }
+}
+.image-cut{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.image-adjust{
+    
+    object-fit: cover;
+}

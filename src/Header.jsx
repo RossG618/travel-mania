@@ -26,7 +26,8 @@ function Header(props) {
 const {messageShow, setMessageShow} = props;
 const {darkMode, setDarkMode} = props;
 
-  useEffect(count => {
+const count = noties.length;
+useEffect((count) => {
     if (count === 0){
       return null;
     }
@@ -64,7 +65,6 @@ const {darkMode, setDarkMode} = props;
     }
     // setNoties(showNoties.filter(item => item.id === item.id))
   }
-  const count = noties.length;
   
   
 // setTimeout(()=>{

@@ -38,9 +38,9 @@ export default function Vacations() {
         <div>
             <main>
 
-            <section class="bg-dark border-top text-center container">
+            <section class="bg-dark mt-3 text-center container">
             <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
+                <div class="col-lg-6 col-md-8 mx-auto pt-2">
                 <h1 class="fw-light text-white">Cruises & Theme Parks</h1>
                 <p class="lead text-muted">Something for the everyone, wether it's just two people who want a getaway to the scandanavian seas and shore or maybe for all-round family fun at a theme of yourr choice .</p>
                 <p>

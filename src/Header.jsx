@@ -4,7 +4,7 @@ import './nav.css'
 
 import { navArrary } from './navArray';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faBell, faHeart, faMessage, faNewspaper, faSignOut, faBullhorn, faPhone, faMap, faClock, faBars, faCheck, faX, faSignIn, faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import {faArrowLeft, faUser, faBell, faHeart, faMessage, faNewspaper, faSignOut, faBullhorn, faPhone, faMap, faClock, faBars, faCheck, faX, faSignIn, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react';
 import { notiesArray } from './notiesArray';
 import { ToastContainer, toast } from 'react-toastify';
@@ -44,7 +44,7 @@ useEffect((count) => {
   }
   const navBarStyles = 
 'nav-item nav-link mx-2  mobile-navitem text-decoration-none';
-  const showClass = () => {
+  const showSettings = () => {
     setShowDrop(!showDrop)
   }
 
@@ -78,9 +78,10 @@ useEffect((count) => {
       <ToastContainer/>
      
 
-        <div className={`position-absolute messages-div ${messageShow ? 'messshow' : 'unshow'} bg-body shadow`}>
-          <h1 className='border-bottom'>
+        <div className={`position-fixed messages-div ${messageShow ? 'messshow' : 'unshow'} bg-body shadow`}>
+          <h1 className='border-bottom align-items-center'>
           Messages
+          <FontAwesomeIcon className='mx-2' icon={faArrowLeft} size="xs" onClick={() => setMessageShow(false)}/>
           </h1>
           <div className='messages'>
              {accounts.map(item => 
@@ -139,7 +140,7 @@ useEffect((count) => {
         <div className='d-flex align-items-center' id="logo">
           <img src={logo} className="App-logo h-25" alt="logo" width="50px" />
           <a href="/" >
-            <h3 className="text-primary" style={{"font-family": " rog fonts"}}>Travel <span className="text-warning text-decoration-none" style={{"font-family": " rog fonts"}}>&gt;Mania</span></h3>
+            <h3 className="text-primary rog-font">Travel <span className="text-warning text-decoration-none rog-font">&gt;Mania</span></h3>
           </a>
           <FontAwesomeIcon icon={faBars} inverse className='menu-mobile ' onClick={handleShowNav}/>
         </div>
@@ -154,7 +155,7 @@ useEffect((count) => {
             </li>)}
         </div>
 
-        <div className='d-flex align-items-center gap-4 px-2 '>
+        <div className='d-flex align-items-center gap-4 px-2 ' onClick={showSettings}>
         <div className="dropdown">
           {notifacations ? 
           <span>
@@ -195,7 +196,7 @@ useEffect((count) => {
       </div>
           {/* <FontAwesomeIcon icon={faGear} size="lg" inverse/> */}
           <div className="dropdown">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" className="bi bi-gear-wide-connected dropdown-toggle show" onClick={showClass}  data-bs-toggle="dropdown" aria-expanded="true" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" className="bi bi-gear-wide-connected dropdown-toggle show" onClick={showSettings}  data-bs-toggle="dropdown" aria-expanded="true" viewBox="0 0 16 16">
   <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
 </svg>
         <ul className={`dropdown-menu text-small shadow border-none p-0 ${showDrop && 'show'}`} data-popper-placement="bottom-start" style={{"width": "220px", "position": "absolute", "inset":" 0px auto auto 0px", "margin": "0px", "transform": "translate3d(-210px, 34px, 0px)"}}>

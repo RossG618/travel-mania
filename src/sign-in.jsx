@@ -45,7 +45,7 @@ export default function SignIn(){
         <main className="form-signin " style={{'background-color': '#7b7'}}>
   <form type="submit" className="signin-form container p-3 shadow bg-dark" onSubmit={handleSubmit}>
          <a href="/" >
-            <h1 className="text-primary" style={{"font-family": " rog fonts"}}>T<span className="text-warning text-decoration-none" style={{"font-family": " rog fonts"}}>/M</span></h1>
+            <h1 className="text-primary rog-font" >T<span className="text-warning text-decoration-none rog-font" >/M</span></h1>
           </a>
     <h1 className="h3 mt-3 fw-normal text-white">Please sign in</h1>
     <p className="text-center text-white mb-3">Enter login details </p>

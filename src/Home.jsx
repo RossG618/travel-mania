@@ -158,11 +158,11 @@ export default function Home() {
       </table>
     </div>
   </div>
-  <div class="d-flex flex-md-equal my-md-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-center">
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden col">
+  <div class="d-flex flex-md-equal my-md-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xxl-5 g-3 mx-0 justify-content-center">
+    <div class="bg-light me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3 ">
         <h2 class="display-5">Entertainment</h2>
-        <p class="lead">Laugh, cry, enjoy your selves in severals different ways</p>
+        {/* <p class="lead">Laugh, cry, enjoy your selves in severals different ways</p> */}
       </div>
 
       <img style={{"width":"80%", "height": "35%",}} className="rounded-4 image-adjust" src="https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1100,h_675,c_fill/expose/iconinc/images/iconincs-cinema-friends-watching-movie.jpg" alt="img" />
@@ -170,10 +170,10 @@ export default function Home() {
       <img style={{"width":"35%", "height": "35%"}} className="rounded-4 m-2  image-adjust" src="https://ichef.bbci.co.uk/images/ic/640x360/p02vmp73.jpg" alt="img" />
 
     </div>
-    <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden col">
+    <div class="text-bg-primary me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3">
         <h2 class="display-5">Leisure</h2>
-        <p class="lead">Luxury and leisure in all  flavors</p>
+        {/* <p class="lead">Luxury and leisure in all  flavors</p> */}
       </div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Sunbathing_couple.jpg/1024px-Sunbathing_couple.jpg"
         style={{"width":"80%", "height": "35%"}} className="rounded-4 image-adjust"
@@ -186,23 +186,23 @@ export default function Home() {
          alt="img" />
       {/* <div class="bg-light shadow-sm mx-auto" style={{"width":"80%", "height": "300px", "border-radius": "21px 21px 0 0"}}></div> */}
     </div>
-    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden col">
+    <div class="bg-light me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3">
-        <h2 class="display-5">Kids have fun</h2>
-        <p class="lead">Children can play together at anytime wether it's in the play ground, Laser tag or at a waterpark.</p>
+        <h2 class="display-5">Fun 4 Kids</h2>
+        {/* <p class="lead">Children can play together at anytime wether it's in the play ground, Laser tag or at a waterpark.</p> */}
       </div>
       <img style={{"width":"80%", "height": "35%",}} className="rounded-4 image-adjust" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/10992/b8b237ee-7cfe-4eab-b79b-dac389707899.jpg" alt="img" />
       <img style={{"width":"35%", "height": "35%"}} className="rounded-4 m-2 image-adjust" src="https://www.cunninghamandmears.com/wp-content/uploads/2019/05/Keeping-Your-Kids-Safe-on-Water-Slides-.jpeg" alt="img" />
       <img style={{"width":"35%", "height": "35%"}} className="rounded-4 m-2 image-adjust" src="https://www.adventureswales.co.uk/wp-content/uploads/2020/10/laser-tag-party-1024x621.jpg" alt="img" />
     </div>
-    <div class="text-bg-primary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden col">
+    <div class="text-bg-primary me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3 ">
         <h2 class="display-5">Clubs</h2>
-        <p class="lead">Enjoy some time socialising with people of similar in calm, quiet enviroment in any one of our many social clubs.</p>
+        {/* <p class="lead">Enjoy some time socialising with people of similar in calm, quiet enviroment in any one of our many social clubs.</p> */}
       </div>
       
       <img style={{"width":"80%", "height": "35%",}} className="rounded-4 image-adjust"  src="https://assets-global.website-files.com/620d33583b1d5d3a4049c7ed/623dd8133536f5a7e9b24155_KW_3305_Archery.jpg" alt="img" />
-      <img style={{"width":"35%", "height": "35%",}} className="rounded-4 m-2 image-adjust" src="https://images.squarespace-cdn.com/content/v1/60a7a8e618844e32d8fce05f/1623236944430-LRV9PDVESYHOMMJ5J2B0/Social-Club-Logo-2018-Logo-Colour.png" alt="img" />
+      <img style={{"width":"35%", "height": "35%",}} className="rounded-4 m-2 image-adjust shadow-sm" src="https://images.squarespace-cdn.com/content/v1/60a7a8e618844e32d8fce05f/1623236944430-LRV9PDVESYHOMMJ5J2B0/Social-Club-Logo-2018-Logo-Colour.png" alt="img" />
       <img style={{"width":"35%", "height": "35%",}} className="rounded-4 m-2 image-adjust" src="https://s.rsg.sc/sc/images/og/socialclub.png" alt="img" />
       {/* <div class="bg-light shadow-sm mx-auto" style={{"width":"80%", "height": "300px", "border-radius": "21px 21px 0 0"}}></div> */}
     </div>

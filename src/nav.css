@@ -11,6 +11,9 @@
   a{
     text-decoration: none !important;
   }
+  .header{
+    z-index: 20;
+  }
   .bi-gear-wide-connected {
     animation-duration: 10s;
     animation-name: bi-gear-wide-connected;

@@ -4,11 +4,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signin.css'
 //
-export default function SignIn(){
+export default function Login(props){
     const [passReveal, setPassReveal] = useState(false)
     const [remember, setRemember] = useState(false);
-    const [details, setDetails] = useState({username: "", email:"", password:""});
+    const [details, setDetails] = useState({username: "", password:""});
     const [error, setError] = useState("")
+    const {setSignedIn, setUserId} = props;
 
     //
     const admin = {username: "admin", password: "admin"};
@@ -25,14 +26,21 @@ export default function SignIn(){
         // setUser({username: details.username, password:details.password});
         // dispatch(logIn({username: details.username, password:details.password}));
         navigate('/users/admin')
+        setSignedIn(true)
+        setUserId('admin')
         console.log('logged in')
       }else if(details.username === jake.username && details.password === jake.password){
         navigate('/users/jacob')
+        setSignedIn(true)
+        setUserId(`jacob`)
       }else if(details.username === Guest.username){
         navigate('/users/Guest')
+        setSignedIn(true)
+        setUserId(`guest`)
       }else {
         console.log('Wrong passkey');
         setError("Wrong Details");
+        setSignedIn(false)
       }
     }
     // const verifyAuto = () => {
@@ -42,8 +50,8 @@ export default function SignIn(){
         
     // }
     return(
-        <main className="form-signin " style={{'background-color': '#7b7'}}>
-  <form type="submit" className="signin-form container p-3 shadow bg-dark" onSubmit={handleSubmit}>
+        <main className="form-signin main d-flex align-items-center" style={{'background-color': '#7b7'}}>
+  <form type="submit" className="signin-form container p-3 shadow bg-dark " onSubmit={handleSubmit}>
          <a href="/" >
             <h1 className="text-primary rog-font" >T<span className="text-warning text-decoration-none rog-font" >/M</span></h1>
           </a>

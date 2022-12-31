@@ -11,9 +11,10 @@
   a{
     text-decoration: none !important;
   }
-  .header{
-    z-index: 20;
+  .z-99{
+    z-index: 99 ;
   }
+  
   .bi-gear-wide-connected {
     animation-duration: 10s;
     animation-name: bi-gear-wide-connected;
@@ -38,14 +39,27 @@
 
   }
   
+  
+  @media screen and (max-width: 760px) {
+    .header-text{
+      display: none;
+    }
+  }
   @media screen and (max-width: 1080px){
+    .dropdown{
+      margin-top: 20px;
+      
+    }
+     .dropdown-menu{
+    transform: translate(-100px, -250px) !important;
+  }
     .mobile{
         flex-direction: column;
     }
     .mobile-navbar{
         flex-direction: column;
         width: 80% !important;
-      margin: 0 0 20px;
+      margin: 1rem 0 20px;
       
     }
         
@@ -64,9 +78,10 @@
  #reveal{
      transition: all 0.5s;
       transform: translate(0, 0);    
-      height: 28vh;
+      height: 30vh;
       flex-direction: column;
       opacity: 1;
+      z-index: 100;
     }
     
   }
@@ -84,7 +99,7 @@
 }
 .messages-div{
   padding: 10px 20px;
-  z-index: 99;
+  z-index: 90;
 
 }
 .messages{
@@ -99,4 +114,19 @@
   transform: translate(0px, 300px) !important;
   transition: all 0.6s ease-in-out;
   opacity: 1;
+  z-index: 200;
+}
+.nav-buttons{
+  background: none !important;
+
+}
+.nav-buttons:focus-within{
+  border-bottom: solid 1px red !important ;
+}
+.colgrad{
+  background: #283c86;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

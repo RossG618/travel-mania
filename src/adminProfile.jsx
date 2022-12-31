@@ -33,7 +33,7 @@ export default function AdminProfile(){
         <div className="bg-dark border-top border-primary pt-3">
             
             <div className="container bg-body d-flex gap-3  p-0 mt-0 shadow flex-wrap profile-bar">
-        <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/242505670_6166257663415795_5852665693999979379_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_ohc=F1kGb6k1xNEAX_nnT0p&_nc_ht=scontent-lhr8-1.xx&oh=00_AfAZdijfm6lVIx-6ksO0TzMk2Z5gfvEmRPaKBOXI4FORAw&oe=63A1D50B" alt="img" />
+        <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/242505670_6166257663415795_5852665693999979379_n.jpg?stp=dst-jpg_s960x960&_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_ohc=t7eTOdurJ4IAX-iUAIn&_nc_ht=scontent-lhr8-1.xx&oh=00_AfCsuUARXtG1MiHjrKzmzw3T1roz-QAxkTQ8U42JomQy_w&oe=63B3A14B" alt="img" />
         
         <div className="d-flex flex-column text-start info">
             <div className="d-flex justify-content-between align-items-baseline my-4">

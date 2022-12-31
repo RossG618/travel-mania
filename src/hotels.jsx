@@ -4,7 +4,7 @@ export default function Hotels() {
 
     return ( 
         <div className="pb-3">
-            <h1 className="py-2 title border-bottom">Hotels</h1>
+            <h1 className="p-2 title border-bottom">Hotels</h1>
             <div className="container mt-5 p-2">
     <div className='row flex-lg-row-reverse align-items-center bg-light shadow-sm-hov shadow-sm rounded g-5 pb-3 '>
       <div className="col-10 col-sm-8 col-lg-6">

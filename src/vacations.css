@@ -10,3 +10,7 @@ button {
   .off {
     color: #ccc;
   }
+  .favIcon{
+    transform: translate(180px, 10px);
+    position: absolute;
+  }

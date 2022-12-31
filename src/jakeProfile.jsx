@@ -5,12 +5,21 @@ import './profile.css'
 import { nanoid } from 'nanoid';
 import { jobDeets, jobHistory } from './jobDetails';
 import { faGraduationCap, faHistory, faLandmark } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from 'react-router-dom';
+
 //
 
 export default function JakeProfile(props){
     const [show, setShow] = useState(false)
     const {messageShow} = props
     const {darkMode} = props
+    const {signedIn} = props
+    //
+    
+      const navigate = useNavigate();
+      if (!signedIn){
+         navigate('/login');
+      }
 
     // const [completed, setCompleted] = useState(0);
 
@@ -33,10 +42,10 @@ export default function JakeProfile(props){
     
 
     return(
-        <div className={`bg-blood ${messageShow && 'bg-shadow'} ${darkMode && 'bg-dark'}`}>
+        <div className={`${messageShow && 'bg-shadow'} ${darkMode ? 'bg-dark':'bg-blood'}`}>
             
             <div className="container mt-0 d-flex gap-3 pt-3 p-0 shadow-sm rounded flex-wrap profile-bar ">
-        <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4 " src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/242505670_6166257663415795_5852665693999979379_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_ohc=F1kGb6k1xNEAX_nnT0p&_nc_ht=scontent-lhr8-1.xx&oh=00_AfAZdijfm6lVIx-6ksO0TzMk2Z5gfvEmRPaKBOXI4FORAw&oe=63A1D50B" alt="profile-img" />
+        <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4 " src="https://scontent-lhr8-1.xx.fbcdn.net/v/t1.6435-9/154416524_10159522056229203_4571259671155449589_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=OoSjEaF2liYAX_J2MoL&_nc_ht=scontent-lhr8-1.xx&oh=00_AfDlOYFBdiqCgGA2xYhvMslZkIj2r3CBHLOPEMxA6qraVw&oe=63D6CD3F" alt="profile-img" />
         
         <div className="d-flex flex-column text-start info bg-body">
             <div className="d-flex justify-content-between align-items-baseline my-4">
@@ -54,7 +63,7 @@ export default function JakeProfile(props){
         <div className="d-flex flex-wrap profile-choices">
         <div className="d-flex flex-column col mb-5 mx-3 about-info">
         <h5><strong>About</strong></h5>
-        <p style={lineLimt3}>I have been to the five wonders of the world and climbed mt. Everest, i know chinese, divish and german i also love skydiving, social activities like bowling, paintball.</p>
+        <p style={lineLimt3}>I have been to the five wonders of the world and climbed mt. Everest, i know chinese, spanish and german i also love skydiving, social activities like bowling, paintball.</p>
         <p className="my-2 btn align-self-start"><button className="btn btn-secondary">View details »</button></p>
         </div>
         <div class="row row-cols-2 col  mb-2">

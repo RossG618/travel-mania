@@ -3,8 +3,7 @@ export const navArrary = [
     link: '/'},
     {title: 'Vacations',
     link: '/vacations'},
-    {title: 'Amusment park',
-    link: '/theme-parks'},
+    
     {title: 'Hotels',
     link: '/hotels'},
 ]

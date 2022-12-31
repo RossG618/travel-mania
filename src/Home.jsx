@@ -3,22 +3,23 @@ import './mainPage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { selectArray } from './selectionArray';
+//
+export const lineTextStyle = {
+    maxWidth: '100%',
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: 3,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  };
 export default function Home() {
  
-//  const lineTextStyle = {
-//     maxWidth: '100%',
-//     display: '-webkit-box',
-//     WebkitBoxOrient: 'vertical',
-//     WebkitLineClamp: 2,
-//     overflow: 'hidden',
-//     textOverflow: 'ellipsis',
-//   };
   const heroPics = 'shadow img-fluid position-absolute rounded';
   // const handlePriceSelectInfo = (e) => {
   //   const key = e.target.key;
   // }
   return (
-    <div className="App">
+    <div className="App App-HeroContainer">
       <div className=" px-4 pt-5 Hero App-Hero ">
     <div className=" container-fluid row flex-lg-row-reverse align-items-center justify-content-center g-5 p-5 ">
       <div className=" col-10 col-sm-8 col-lg-6  position-relative">
@@ -31,7 +32,7 @@ export default function Home() {
         <h1 className="display-5 text-white fw-bold lh-1 mb-4 text-capitalize"><strong className='nabla fw-bold display-1'>Insane</strong><br/> travel madness</h1>
         <p className="lead text-white">Holidays, Theme parks Resorts and Viking-like cruises are just a few of the many choices of vacations perfect for a fortnight of family fun and Relaxation</p>
         <div className="d-grid d-flex flex-row gap-2 d-md-flex justify-content-center">
-          <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+          <button type="button" className="btn btn-info text-light fw-bold btn-lg px-4 me-md-2">Primary</button>
           <button type="button " className="btn btn-outline-secondary btn-lg px-4 text-light">Default</button>
         </div>
       </div>
@@ -94,7 +95,7 @@ export default function Home() {
       </div>
     </div>
 
-    <h2 className="display-6 text-center mb-4">Compare plans</h2>
+    <h2 className="display-6 text-light text-center mb-4">Compare plans</h2>
 
     <div className="table-responsive container bg-white shadow-sm rounded">
       <table className="table text-center">
@@ -158,7 +159,7 @@ export default function Home() {
       </table>
     </div>
   </div>
-  <div class="d-flex flex-md-equal my-md-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xxl-5 g-3 mx-0 justify-content-center">
+  <div class="d-flex flex-md-equal pb-3 my-md-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xxl-5 g-3 mx-0 justify-content-center">
     <div class="bg-light me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3 ">
         <h2 class="display-5">Entertainment</h2>

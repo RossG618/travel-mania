@@ -1,11 +1,13 @@
 .title{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 600;
-    color: rgb(48, 41, 102);
+font-family: 'copperplate gothic';
+color: rgb(133, 131, 19);
+   
 }
 .shadow-sm-hov:hover{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 .hotel-title{
-font-family: 'copperplate gothic';
+ font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: rgb(89, 74, 199);
 }

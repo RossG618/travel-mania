@@ -15,9 +15,16 @@ import JakeProfile from './jakeProfile';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { NotFound } from './NotFound';
 import SignUp from './signUp';
+import NewUser from './newUser';
 export const emptyHeart = faHeart
 function App() {
   const [details, setDetails] = useState({
+    username: "",
+     password:"",
+    firstName:"",
+    lastName:"",
+ });
+  const [newUserDetails, setNewUserDetails] = useState({
     username: "",
      password:"",
     firstName:"",
@@ -42,28 +49,38 @@ function App() {
     />
        <Routes>
       <Route path='/fav' element={<Favorites/>} ></Route>
-
+        <Route element={<NewUser newUserDetails={newUserDetails} setNewUserDetails={setNewUserDetails} setSignedIn={setSignedIn} setUserId={setUserId}/>} path="/newUser"/>
         <Route element={<AdminProfile/>} path="/users/admin"/>
+
         <Route element={<JakeProfile 
         darkMode={darkMode} 
         signedIn={signedIn}
         />} path="/users/jacob"/>
+
         {/* <Route element={<Users/>} path="/profile"/> */}
+
         <Route element={<Login 
-        setSignedIn={setSignedIn} 
-        setUserId={setUserId}
-        />} path="/login"/>
-        <Route element={<SignUp 
         setSignedIn={setSignedIn} 
         setUserId={setUserId}
         details={details}
         setDetails={setDetails}
+        />} path="/login"/>
+
+        <Route element={<SignUp 
+        setSignedIn={setSignedIn} 
+        setUserId={setUserId}
+        details={details}
+        newUserDetails={newUserDetails}
+        setNewUserDetails={setNewUserDetails}
         />} path="/sign-up"/>
+
         <Route element={<Hotels/>} path='/hotels'/>
         <Route element={<Vacations/>} path='/vacations'/>
+
         <Route element={<Home 
           darkMode={darkMode}
           />} exact path='/'/>
+
         <Route element={<NotFound/>} exact path='*'/>
       </Routes>
      

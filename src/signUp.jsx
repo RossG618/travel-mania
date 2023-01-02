@@ -3,13 +3,13 @@ import { faEyeSlash, faEye } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './signin.css'
+import { userInfo } from './remPass';
 //
 export default function SignUp(props){
     const [passReveal, setPassReveal] = useState(false)
     const [remember, setRemember] = useState(false);
-   
     const [error, setError] = useState("")
-    const {setSignedIn, setUserId, details, setDetails} = props;
+    const {setSignedIn, newUserDetails, setNewUserDetails} = props;
 
     //
     const admin = {username: "admin", password: "admin"};
@@ -20,23 +20,10 @@ export default function SignUp(props){
 
     const handleSubmit = e => {
       e.preventDefault();
-      // dispatch(Login({username: username, password: password}));
       // imperatively redirect the user to /profile
-      if (details.username === admin.username && details.password === admin.password){
-        // setUser({username: details.username, password:details.password});
-        // dispatch(logIn({username: details.username, password:details.password}));
-        navigate('/users/admin')
-        setSignedIn(true)
-        setUserId('admin')
-        console.log('logged in')
-      }else if(details.username === jake.username && details.password === jake.password){
-        navigate('/users/jacob')
-        setSignedIn(true)
-        setUserId(`jacob`)
-      }else if(details.username === Guest.username){
-        navigate('/users/Guest')
-        setSignedIn(true)
-        setUserId(`guest`)
+      // USE LOOP?
+      if (newUserDetails.username !== admin.username || newUserDetails.username !== jake.username || newUserDetails.username !== Guest.username){
+        navigate('/newUser')
       }else {
         console.log('Wrong passkey');
         setError("Wrong Details / input field empty");
@@ -46,9 +33,12 @@ export default function SignUp(props){
     // const verifyAuto = () => {
 
     // }
-    // const rememberMe = () =>{
-        
-    // }
+    const rememberMe = () =>{
+        if (remember){
+            userInfo.push(newUserDetails)
+            console.log(userInfo)
+        }
+    }
     return(
         <main className="form-signin App d-flex align-items-center" style={{'background-color': '#7b7'}}>
           <form type="submit" className="signin-form container p-3 shadow bg-dark " onSubmit={handleSubmit}>
@@ -64,8 +54,8 @@ export default function SignUp(props){
               <input
               id="firstname floatingInput"
               name="firstname"
-              onChange={e => setDetails( {...details, firstName: e.target.value})}
-              value={details.firstName}
+              onChange={e => setNewUserDetails( {...newUserDetails, firstName: e.target.value})}
+              value={newUserDetails.firstName}
               type="text" className="form-control rounded-3"  placeholder="name@example.com"/>
               <label for="floatingInput">First Name</label>
             </div>
@@ -73,8 +63,8 @@ export default function SignUp(props){
               <input
               id="lastname floatingInput"
               name="lastname"
-              onChange={e => setDetails( {...details, lastName: e.target.value})}
-              value={details.lastName}
+              onChange={e => setNewUserDetails( {...newUserDetails, lastName: e.target.value})}
+              value={newUserDetails.lastName}
               type="text" className="form-control rounded-3" placeholder="lastname"/>
               
               <label for="floatingInput">Last Name</label>
@@ -84,8 +74,8 @@ export default function SignUp(props){
               <input
               id="username floatingInput"
               name="username"
-              onChange={e => setDetails( {...details, username: e.target.value})}
-              value={details.username}
+              onChange={e => setNewUserDetails( {...newUserDetails, username: e.target.value})}
+              value={newUserDetails.username}
               type="text" className="form-control rounded-0 rounded-top" placeholder="username"/>
               
               <label for="floatingInput">Username</label>
@@ -95,8 +85,8 @@ export default function SignUp(props){
               <input
               id="password floatingPassword"
               name="password"
-              onChange={e => setDetails( {...details, password: e.target.value})}
-              value={details.password}
+              onChange={e => setNewUserDetails( {...newUserDetails, password: e.target.value})}
+              value={newUserDetails.password}
               type={passReveal ? 'text' : "password"}
               className="form-control pass-bar" placeholder="Password"/>
               <div className="input-group-append">
@@ -113,7 +103,7 @@ export default function SignUp(props){
 
             <div className="checkbox mt-1 mb-3">
               <label className="text-white">
-                <input  type="checkbox" value="remember-me" onClick={() => setRemember(!remember)}/> Remember me
+                <input  type="checkbox" value="remember-me" onClick={() => setRemember(!remember)} onChange={rememberMe}/> Remember me
               </label>
             </div>
             <div className="d-flex flex-column align-items-center">

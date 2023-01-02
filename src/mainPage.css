@@ -109,6 +109,9 @@ right: 90px;
     .price, .pop-tagDiv{
         transform: scale(1)
     }
+    .price button{
+        width: 70% !important;
+    }
 }
 @media screen and (min-width: 400px ){
     .Hero{

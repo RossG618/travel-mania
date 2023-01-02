@@ -4,7 +4,7 @@ import './contact.css'
 export function Contact(props){
     const {contact, setContact} = props
     return(
-        <div className={`z-99 position-sticky bg-body mx-auto p-2 border ${contact ? 'contact-open' : 'contact-close'}` }>
+        <div className={`z-99 position-sticky bg-body mx-auto p-2 border  ${contact ? 'contact-open' : 'contact-close'}` }>
             <ModalDialog>
                 <ModalHeader className="border-bottom" closeButton onClick={()=>setContact(false)}>
                     <ModalTitle>
@@ -25,7 +25,7 @@ export function Contact(props){
 export function Locations(props){
     const {locations, setLocations} = props
     return(
-        <div className={`z-99 position-sticky bg-body mx-auto p-2 border ${locations ? 'contact-open' : 'contact-close'}` }>
+        <div className={`z-99 position-sticky bg-body mx-auto p-2 border  ${locations ? 'contact-open' : 'contact-close'}` }>
             <ModalDialog>
                 <ModalHeader className="border-bottom" closeButton onClick={()=>setLocations(false)}>
                     <ModalTitle>
@@ -45,7 +45,7 @@ export function Locations(props){
 export function OpenTimes(props){
     const {openTimes, setOpenTimes} = props
     return(
-        <div className={`z-99 position-sticky bg-body mx-auto p-2 border ${openTimes ? 'contact-open' : 'contact-close'}` }>
+        <div className={`z-99 position-sticky bg-body mx-auto p-2 border  ${openTimes ? 'contact-open' : 'contact-close'}` }>
             <ModalDialog>
                 <ModalHeader className="border-bottom" closeButton onClick={()=>setOpenTimes(false)}>
                     <ModalTitle>

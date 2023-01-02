@@ -31,14 +31,14 @@ function Header(props) {
 const { darkMode, setDarkMode, signedIn, setSignedIn, userId, setUserId} = props;
 
 const count = noties.length;
-useEffect((count) => {
-    if (count === 0){
-      return null;
-    }
-    document.title = `You clicked ${count} notifactions`;
-     toast.info(`You have ${count} notifacations`);
-     toast('Please find them in the notifacations icon above');
-  }, [])
+useEffect(() => {
+  document.title = `You clicked ${count} notifactions`;
+  toast.info(`You have ${count} notifacations`);
+  toast('Please find them in the notifacations icon above');
+  if (count === 0){
+    return null;
+  }
+  }, [count])
   
   const showOptInfoFav = () => {
     setshowInfoFav(!showInfoFav)
@@ -78,6 +78,21 @@ useEffect((count) => {
     setSignedIn(false)
     setUserId('notFound')
   }
+  useEffect(() => {
+     if (contact){
+      setLocations(false)
+      setOpenTimes(false)
+    }
+    if (locations){
+      setContact(false)
+      setOpenTimes(false)
+    }
+    if (openTimes){
+      setLocations(false)
+      setContact(false)
+    }
+  }, [contact, locations, openTimes])
+   
 // setTimeout(()=>{
 //   if (notieCount <= 5) {
 //    setNotieCount(notieCount + 1)
@@ -91,6 +106,13 @@ useEffect((count) => {
     messageShow={messageShow} 
     setMessageShow={setMessageShow}
     />
+     <div className="position-absolute">
+        
+        <Contact contact={contact} setContact={setContact}/>
+        <Locations locations={locations} setLocations={setLocations} />
+        <OpenTimes openTimes={openTimes} setOpenTimes={setOpenTimes} />
+        </div>
+    
       <header className='bg-dark'>
         <div className={`${darkMode ? 'bg-dark':'bg-white'} d-flex justify-content-end align-items-center bg-light px-2`}>
 
@@ -120,7 +142,7 @@ useEffect((count) => {
           <img src={logo} className="App-logo h-25" alt="logo" width="50px" />
           <a href="/" >
             <h3 className="text-primary rog-font">Travel <span className="text-warning text-decoration-none rog-font">&gt;Mania</span></h3>
-            <h3 className='colgrad rog-font'>Travel/Mania</h3>
+            <h3 className='colgrad-title rog-font'>Travel/Mania</h3>
           </a>
           <FontAwesomeIcon icon={faBars} size="lg" inverse className='menu-mobile mx-3' onClick={handleShowNav}/>
         </div>
@@ -145,7 +167,7 @@ useEffect((count) => {
           <Link to="/login" className="btn btn-info text-light fw-bold px-4 ">
             Login
           </Link>
-          <Link to="/login" className="btn btn-outline-warning fw-bold">
+          <Link to="/sign-up" className="btn btn-outline-warning fw-bold">
             Join
           </Link>
           </span>
@@ -219,11 +241,7 @@ useEffect((count) => {
         
         </nav>
       </header>
-      <div className="position-absolute ">
-      <Contact contact={contact} setContact={setContact}/>
-      <Locations locations={locations} setLocations={setLocations} />
-      <OpenTimes openTimes={openTimes} setOpenTimes={setOpenTimes} />
-      </div>
+     
     </div>
   );
 }

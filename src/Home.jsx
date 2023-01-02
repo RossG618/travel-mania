@@ -12,14 +12,15 @@ export const lineTextStyle = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   };
-export default function Home() {
- 
+export default function Home(props) {
+  const {darkMode} = props;
   const heroPics = 'shadow img-fluid position-absolute rounded';
   // const handlePriceSelectInfo = (e) => {
   //   const key = e.target.key;
   // }
+
   return (
-    <div className="App App-HeroContainer">
+    <div className={`App ${darkMode ? 'App-HeroContainer' : 'App-Hero'}`}>
       <div className=" px-4 pt-5 Hero App-Hero ">
     <div className=" container-fluid row flex-lg-row-reverse align-items-center justify-content-center g-5 p-5 ">
       <div className=" col-10 col-sm-8 col-lg-6  position-relative">
@@ -54,7 +55,7 @@ export default function Home() {
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> spaceous accomerdations</li>
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> travel to exquisite countries of the world</li>
             </ul>
-            <button type="button" className="w-50 btn btn-lg btn-outline-primary">Sign up for free</button>
+            <button type="button" className="px-3 btn btn-lg btn-outline-primary">Sign up for free</button>
           </div>
         </div>
       </div>
@@ -89,13 +90,13 @@ export default function Home() {
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> spaceous accomerdations</li>
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> travel to exquisite countries of the world</li>
             </ul>
-            <button type="button" className="w-50 btn btn-lg btn-primary">Contact us</button>
+            <button type="button" className="px-4 btn btn-lg btn-primary">Contact us</button>
           </div>
         </div>
       </div>
     </div>
 
-    <h2 className="display-6 text-light text-center mb-4">Compare plans</h2>
+    <h2 className={`display-6 ${darkMode && 'text-light'} text-center mb-4`}>Compare plans</h2>
 
     <div className="table-responsive container bg-white shadow-sm rounded">
       <table className="table text-center">

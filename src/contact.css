@@ -1,12 +1,12 @@
 .contact-close{
     opacity: 0;
-    transform: translate(-600px, 0) scale(0);
+    transform: translate(0, -600px) scale(0);
     transition: all 0.5s ease-in-out;
 }
 
 .contact-open{
     opacity: 1;
-    transform: translate(0, 0) scale(1);
+    transform: translate(100%, 300px) scale(1);
     transition: all 0.5s ease-in-out;
     box-shadow: 12px 12px 2000px 10000px rgba(0, 0, 0, .75);
     z-index: 120;

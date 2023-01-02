@@ -14,8 +14,15 @@ import AdminProfile from './adminProfile';
 import JakeProfile from './jakeProfile';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { NotFound } from './NotFound';
+import SignUp from './signUp';
 export const emptyHeart = faHeart
 function App() {
+  const [details, setDetails] = useState({
+    username: "",
+     password:"",
+    firstName:"",
+    lastName:"",
+ });
   const [darkMode, setDarkMode] = useState(false)
   const [signedIn, setSignedIn] = useState(false);
   const [userId, setUserId] = useState('notUser')
@@ -46,9 +53,17 @@ function App() {
         setSignedIn={setSignedIn} 
         setUserId={setUserId}
         />} path="/login"/>
+        <Route element={<SignUp 
+        setSignedIn={setSignedIn} 
+        setUserId={setUserId}
+        details={details}
+        setDetails={setDetails}
+        />} path="/sign-up"/>
         <Route element={<Hotels/>} path='/hotels'/>
         <Route element={<Vacations/>} path='/vacations'/>
-        <Route element={<Home/>} exact path='/'/>
+        <Route element={<Home 
+          darkMode={darkMode}
+          />} exact path='/'/>
         <Route element={<NotFound/>} exact path='*'/>
       </Routes>
      

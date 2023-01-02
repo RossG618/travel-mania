@@ -5,7 +5,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 export function Messages(props){
     const{messageShow, setMessageShow}=props;
     //
-    return(<div className={`z-99 position-fixed messages-div ${messageShow ? 'messshow' : 'unshow'} bg-body shadow`}>
+    return(<div className={`z-99 position-fixed messages-div ${messageShow ? 'messshow' : 'unshow'} bg-body shadow border-warning border`}>
     <h1 className='border-bottom align-items-center'>
     Messages
     <FontAwesomeIcon className='mx-2' icon={faArrowLeft} size="xs" onClick={() => setMessageShow(false)}/>

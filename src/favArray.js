@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { lineTextStyle } from './Home';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faX } from "@fortawesome/free-solid-svg-icons";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import './favs.css'
 export const favArray = [
     {
@@ -42,28 +42,21 @@ export function Favorites(props){
     
     const [favsList, setFavsList] = useState(favArray)
     
-      const handleAddFav = (id) => {
-        const favCopyAdd = [...favsList]
-        favCopyAdd.push( id)
-        setFavsList(favCopyAdd)
-        
-      }
-      
       const handleDelete = (id) => {
         const favCopy = [...favsList]
         favCopy.splice(id, 1)
         setFavsList(favCopy)
       }
     return(
-        <div className=" favorites bg-body rounded shadow container z-99 p-2 my-2">
+        <div className="App favorites bg-body rounded shadow container p-2 my-2">
             <h2 className="rog-font ">Favorites</h2>
         {favsList.map((item, id) => <div key={id} className="d-flex align-items-center mb-3" >
           <span className="text-bg-secondary rounded-3 mx-2 px-2  shadow-sm">
-            {favsList.indexOf(item) +1}</span>
+            {favsList.indexOf(item) +1}
+            </span>
 
             <div className="d-flex bg-light shadow-sm border  border-primary">
                 <FontAwesomeIcon role="button" icon={faX} id={id} onClick={() => handleDelete(id)} className="p-2"/>
-                <FontAwesomeIcon role="button" icon={faPlus} id={id} onClick={() => handleAddFav(id)} className="p-2"/>
                  <span className="m-2">
             <h3>{item.title}</h3>
             <p style={lineTextStyle}>{item.description}</p>

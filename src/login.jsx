@@ -7,9 +7,8 @@ import './signin.css'
 export default function Login(props){
     const [passReveal, setPassReveal] = useState(false)
     const [remember, setRemember] = useState(false);
-    const [details, setDetails] = useState({username: "", password:""});
     const [error, setError] = useState("")
-    const {setSignedIn, setUserId} = props;
+    const {setSignedIn, setUserId, details, setDetails} = props;
 
     //
     const admin = {username: "admin", password: "admin"};

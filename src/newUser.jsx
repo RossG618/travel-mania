@@ -10,7 +10,7 @@ import { faGraduationCap, faHistory, faLandmark } from "@fortawesome/free-solid-
 export default function NewUser(props){
     const [show, setShow] = useState(false)
     const [edit, setEdit] = useState(false)
-    const {newUserDetails, setNewUserDetails, setSignedIn, setUserId} = props;
+    const {newUserDetails, setNewUserDetails, setSignedIn,} = props;
 
     // const [completed, setCompleted] = useState(0);
 

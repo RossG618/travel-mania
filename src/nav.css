@@ -51,7 +51,7 @@
     }
     
   }
-  @media screen and (max-width: 1080px){
+  @media screen and (max-width: 1020px){
     .dropdown{
       margin-top: 20px;
       
@@ -93,7 +93,7 @@
     
   }
   
-  @media screen and (min-width: 1080px){
+  @media screen and (min-width: 1020px){
     .menu-mobile{
         display: none;
     }

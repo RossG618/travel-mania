@@ -71,7 +71,7 @@ if (count === 0){
 <div className='d-flex align-items-center' id="logo">
   <img src={logo} className="App-logo h-25" alt="logo" width="50px" />
   <a href="/" >
-    <h3 className="text-primary rog-font">Travel <span className="text-warning text-decoration-none rog-font">&gt;Mania</span></h3>
+    {/* <h3 className="text-primary rog-font">Travel <span className="text-warning text-decoration-none rog-font">&gt;Mania</span></h3> */}
     <h3 className='colgrad-title rog-font'>Travel/Mania</h3>
   </a>
   <FontAwesomeIcon icon={faBars} size="lg" inverse className='menu-mobile mx-3' onClick={handleShowNav}/>

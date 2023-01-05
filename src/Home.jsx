@@ -1,7 +1,7 @@
 import './App.css';
 import './mainPage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTag, faCheck } from '@fortawesome/free-solid-svg-icons';
+import {  faCheck } from '@fortawesome/free-solid-svg-icons';
 import { selectArray } from './selectionArray';
 //
 export const lineTextStyle = {
@@ -59,11 +59,11 @@ export default function Home(props) {
           </div>
         </div>
       </div>
-      <div key='pro' className="col pop-tagDiv">
-        <div className="card mb-4 rounded-0 rounded-bottom shadow border-bottom border-primary ">
+      <div key='pro' className="col ">
+        <div className="card mb-4 rounded-0 rounded-bottom shadow border-bottom border-primary pop-tagDiv">
           <div className="card-header p-0 overflow-hidden rounded-0 m-0">
             <img className="image-cut " alt='pop-img' src='https://d3hne3c382ip58.cloudfront.net/files/uploads/bookmundi/resized/cmsfeatured/canary-islands-fuerteventura-1547025436-785X440.jpg'/>
-            <FontAwesomeIcon icon={faTag} className="position-absolute pop-tag" size='2x' rotation={270}/>
+            <p className="sale">SALE</p>
           </div>
           <div className="card-body p-0">
             <h1 className="card-title pricing-card-title border-primary">£250<small style={{"font-size": "30px"}} className="text-info fw-light">/pp</small></h1>
@@ -160,10 +160,10 @@ export default function Home(props) {
       </table>
     </div>
   </div>
-  <div class="d-flex flex-md-equal pb-3 my-md-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xxl-5 g-3 mx-0 justify-content-center">
+  <div class="d-flex flex-md-equal py-3 my-md-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xxl-5 g-3 mx-0 justify-content-center">
     <div class="bg-light me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3 ">
-        <h2 class="display-5 poppins">Entertainment</h2>
+        <h2 class="display-4 esd preview-title">Entertainment</h2>
         {/* <p class="lead">Laugh, cry, enjoy your selves in severals different ways</p> */}
       </div>
 
@@ -174,7 +174,7 @@ export default function Home(props) {
     </div>
     <div class="text-bg-primary me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3">
-        <h2 class="display-5 poppins">Leisure</h2>
+        <h2 class="display-4 esd preview-title">Leisure</h2>
         {/* <p class="lead">Luxury and leisure in all  flavors</p> */}
       </div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Sunbathing_couple.jpg/1024px-Sunbathing_couple.jpg"
@@ -190,7 +190,7 @@ export default function Home(props) {
     </div>
     <div class="bg-light me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3">
-        <h2 class="display-5 poppins">Fun 4 Kids</h2>
+        <h2 class="display-4 esd preview-title">Fun 4 Kids</h2>
         {/* <p class="lead">Children can play together at anytime wether it's in the play ground, Laser tag or at a waterpark.</p> */}
       </div>
       <img style={{"width":"80%", "height": "35%",}} className="rounded-4 image-adjust" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/10992/b8b237ee-7cfe-4eab-b79b-dac389707899.jpg" alt="img" />
@@ -199,7 +199,7 @@ export default function Home(props) {
     </div>
     <div class="text-bg-primary me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
       <div class="my-3 ">
-        <h2 class="display-5 poppins">Clubs</h2>
+        <h2 class="display-4 esd preview-title">Clubs</h2>
         {/* <p class="lead">Enjoy some time socialising with people of similar in calm, quiet enviroment in any one of our many social clubs.</p> */}
       </div>
       

@@ -48,14 +48,14 @@ export function Favorites(props){
         setFavsList(favCopy)
       }
     return(
-        <div className="App favorites bg-body rounded shadow container p-2 my-2">
+        <div className="App  bg-body rounded shadow container p-2 my-2">
             <h2 className="rog-font ">Favorites</h2>
         {favsList.map((item, id) => <div key={id} className="d-flex align-items-center mb-3" >
           <span className="text-bg-secondary rounded-3 mx-2 px-2  shadow-sm">
             {favsList.indexOf(item) +1}
             </span>
 
-            <div className="d-flex bg-light shadow-sm border  border-primary">
+            <div className="d-flex bg-light shadow-sm border favorites border-primary">
                 <FontAwesomeIcon role="button" icon={faX} id={id} onClick={() => handleDelete(id)} className="p-2"/>
                  <span className="m-2">
             <h3>{item.title}</h3>

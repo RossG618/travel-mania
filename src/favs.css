@@ -1,6 +1,12 @@
+.favorites{
+  flex-flow:column-reverse;
+  align-items: center;
+}
+@media screen and (min-width:770px){
+    .favorites{
+        flex-flow:row-reverse; 
+    }
 
-.z-99{
-    z-index: 300 ;
 }
 .w-fit{
     max-width: fit-content;

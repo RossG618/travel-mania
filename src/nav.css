@@ -1,4 +1,7 @@
+:root{
+  --light-blue: rgb(44, 160, 255);
 
+}
 @keyframes bi-gear-wide-connected {
     from {
       transform: rotate(0deg);
@@ -81,18 +84,15 @@
     #reveal{
      transition: all 0.5s;
      transform: translate(0, 0);    
-     height: 26vh;
      flex-direction: column;
      opacity: 1;
+     height: 39vh;
+
      z-index: 100;
     }
     
   }
-  @media screen and (max-height: 900px){
-    #reveal{
-      height: 38vh;
-    }
-  }
+  
   @media screen and (min-width: 1080px){
     .menu-mobile{
         display: none;
@@ -142,4 +142,24 @@ background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-2
 background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.colgrad-success{
+  background: #11998e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.colgrad-darkVirgin{
+  background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+border: solid 1px blue!important;
+}
+.colgrad-logout{
+  background: #009FFF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom left, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+border:none!important;
 }

@@ -80,8 +80,8 @@ export default function Login(props){
 
               <span className="input-group-text reveal-icon h-100" onClick={() => setPassReveal(!passReveal)}>
                 {passReveal ? 
-                <FontAwesomeIcon type="button" icon={faEye} /> :
-                <FontAwesomeIcon type="button" icon={faEyeSlash}/>
+                <FontAwesomeIcon type="button" size="sm" icon={faEye} /> :
+                <FontAwesomeIcon type="button" size="sm" icon={faEyeSlash}/>
                 }
               </span>
               </div>
@@ -95,7 +95,7 @@ export default function Login(props){
             </div>
             <div className="d-flex flex-column align-items-center">
 
-            <button className="w-50 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <button className="w-50 btn btn-lg btn-primary btn-shadow" type="submit">Sign in</button>
             <small class="text-muted mt-2">By clicking Sign up, you agree to the terms of use.</small>
             </div>
                   <span className="d-flex align-items-center my-3">
@@ -105,15 +105,15 @@ export default function Login(props){
                   <hr className="border-bottom w-50 mx-2"/>
                   </span>
                   <h2 className="fs-5 fw-bold mb-3 text-white">Or use a third-party</h2>
-                  <button className="w-100 py-2 mb-2 btn  btn-outline-success rounded-3" type="submit">
+                  <button className="w-100 py-2 mb-2 btn btn-shadow  btn-outline-success rounded-3" type="submit">
                     <svg className="bi me-1 " width="16" height="16"><use href="#twitter"></use></svg>
                     Signin with Twitter
                   </button>
-                  <button className="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+                  <button className="w-100 py-2 mb-2 btn btn-shadow btn-outline-primary rounded-3" type="submit">
                     <svg className="bi me-1" width="16" height="16"><use href="#facebook"></use></svg>
                     Signin with Facebook
                   </button>
-                  <button className="w-100 py-2 mb-2 btn  btn-outline-secondary rounded-3" type="submit">
+                  <button className="w-100 py-2 mb-2 btn btn-shadow  btn-outline-secondary rounded-3" type="submit">
                     <svg className="bi me-1" width="16" height="16"><use href="#github"></use></svg>
                     Signin with GitHub
                   </button>

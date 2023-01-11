@@ -88,6 +88,7 @@ p {
     transform: translate(-50%, 0px);
 }
 .bg-shadow{
+    z-index: 999;
     background-color: black;
     opacity: 0.8;
     height: 100vh;

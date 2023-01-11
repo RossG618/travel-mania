@@ -40,13 +40,14 @@ export default function SignUp(props){
         }
     }
     return(
-        <main className="form-signin App d-flex align-items-center" style={{'background-color': '#7b7'}}>
-          <form type="submit" className="signin-form container p-3 shadow bg-dark " onSubmit={handleSubmit}>
+        <main className="form-signin App d-flex align-items-center vh-90" style={{'background-color': '#7b5'}}>
+          <form type="submit" className="signin-form container p-3 shadow bg-light" onSubmit={handleSubmit}>
                 <a href="/" >
-                    <h1 className="text-primary rog-font" >T<span className="text-warning text-decoration-none rog-font" >/M</span></h1>
+                <h1 className="colgrad-title text-center text rog-font text-uppercase">t/m</h1>
+                    {/* <h1 className="text-primary rog-font" >T<span className="text-warning text-decoration-none rog-font" >/M</span></h1> */}
                   </a>
-            <h1 className="h3 mt-3 fw-normal text-white">Join us</h1>
-            <p className="text-center text-white mb-3">Enter details </p>
+            <h1 className="h3 mt-3 fw-normal text-bg-light">Join us</h1>
+            <p className="text-center text-bg-light mb-3">Enter details </p>
             <p className="mb-0" style={{color: "red"}}>
                 {error}
             </p>
@@ -102,31 +103,31 @@ export default function SignUp(props){
             </div>
 
             <div className="checkbox mt-1 mb-3">
-              <label className="text-white">
+              <label className="text-bg-light">
                 <input  type="checkbox" value="remember-me" onClick={() => setRemember(!remember)} onChange={rememberMe}/> Remember me
               </label>
             </div>
             <div className="d-flex flex-column align-items-center">
 
-            <button className="w-75 btn btn-lg btn-primary btn-shadow" type="submit">Sign in</button>
+            <button className="w-75 btn btn-lg btn-primary btn-shadow-sm" type="submit">Sign in</button>
             <small class="text-muted mt-2">By clicking Sign up, you agree to the terms of use.</small>
             </div>
                   <span className="d-flex align-items-center my-3">
 
                   <hr className="border-bottom w-50 mx-2"/>
-                  <p className="text-light m-0">or</p>
+                  <p className="text-bg-light m-0">or</p>
                   <hr className="border-bottom w-50 mx-2"/>
                   </span>
-                  <h2 className="fs-5 fw-bold mb-3 text-white">Or use a third-party</h2>
-                  <button className="w-100 py-2 mb-2 btn btn-shadow btn-outline-success rounded-3" type="submit">
+                  <h2 className="fs-5 fw-bold mb-3 text-bg-light">Or use a third-party</h2>
+                  <button className="w-100 py-2 mb-2 btn btn-shadow-sm btn-outline-success rounded-3" type="submit">
                     <svg className="bi me-1 " width="16" height="16"><use href="#twitter"></use></svg>
                     Sign up with Twitter
                   </button>
-                  <button className="w-100 py-2 mb-2 btn btn-shadow btn-outline-primary rounded-3" type="submit">
+                  <button className="w-100 py-2 mb-2 btn btn-shadow-sm btn-outline-primary rounded-3" type="submit">
                     <svg className="bi me-1" width="16" height="16"><use href="#facebook"></use></svg>
                     Sign up with Facebook
                   </button>
-                  <button className="w-100 py-2 mb-2 btn btn-shadow  btn-outline-secondary rounded-3" type="submit">
+                  <button className="w-100 py-2 mb-2 btn btn-shadow-sm  btn-outline-secondary rounded-3" type="submit">
                     <svg className="bi me-1" width="16" height="16"><use href="#github"></use></svg>
                     Sign up with GitHub
                   </button>

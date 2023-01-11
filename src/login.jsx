@@ -49,10 +49,10 @@ export default function Login(props){
         
     // }
     return(
-        <main className="form-signin App d-flex align-items-center" style={{'background-color': '#7b7'}}>
+        <main className="form-signin App d-flex align-items-center vh-90" style={{'background-color': '#7b7'}}>
           <form type="submit" className="signin-form container p-3 shadow bg-dark " onSubmit={handleSubmit}>
                 <a href="/" >
-                  <h1 className="colgrad-title text-center text rog-font">t/m</h1>
+                  <h1 className="colgrad-title text-center text rog-font text-uppercase">t/m</h1>
                     {/* <h1 className="text-primary rog-font" >T<span className="text-warning text-decoration-none rog-font" >/M</span></h1> */}
                   </a>
             <h1 className="h3 mt-3 fw-normal text-white">Please sign in</h1>

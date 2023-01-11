@@ -3,6 +3,9 @@ import './mainPage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faCheck } from '@fortawesome/free-solid-svg-icons';
 import { selectArray } from './selectionArray';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 //
 export const lineTextStyle = {
     maxWidth: '100%',
@@ -12,43 +15,54 @@ export const lineTextStyle = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   };
-export default function Home(props) {
-  const {darkMode} = props;
-  const heroPics = 'shadow img-fluid position-absolute rounded';
+export default function Home() {
+  useEffect(() => {
+    AOS.init()
+  })
+  // const {darkMode} = props;
+  // const heroPics = 'shadow img-fluid position-absolute rounded';
+
+
   // const handlePriceSelectInfo = (e) => {
   //   const key = e.target.key;
   // }
-
+const deadCenterStyle = 'align-items-center justify-content-center'
   return (
-    <div className={`App ${darkMode ? 'App-HeroContainer' : 'App-Hero'}`}>
-      <div className=" px-4 pt-5 Hero App-Hero ">
-    <div className=" container-fluid row flex-lg-row-reverse align-items-center justify-content-center g-5 p-5 ">
-      <div className=" col-10 col-sm-8 col-lg-6  position-relative">
-        <img src="https://www.travelscout24.de/wp-content/uploads/sites/14/Discount-Travel.jpg "
-         className="d-block mx-lg-auto img-fluid rounded-2" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
-         <img className={`${heroPics} pic1-hero`} src="https://www.travelmarvel.com.au/-/media/apt-responsive-website/miscellaneous/hero-panel-12-5/generic-12-5/hc-a-generic-map-travel-destinations-419995780-s-12-5.jpg?useCustomFunctions=1&rw=2280&w=1900&h=950&cropX=304&cropY=0" width="700" height="500" loading="lazy" alt="" />
-         <img className={`${heroPics} pic2-hero`} src="https://www.urtravelhelper.com/wp-content/uploads/2019/10/5ef595685c354e35adcf8137dcb963d9-1024x768.jpg" width="500" height="500" loading="lazy" alt="" />
-      </div>
-      <div className="col-lg-6 text-start hero-header">
-        <h1 className="display-5 text-white fw-bold lh-1 mb-4 text-capitalize"><strong className='nabla fw-bold display-1'>Insane</strong><br/> travel madness</h1>
-        <p className="lead text-white">Holidays, Theme parks Resorts and Viking-like cruises are just a few of the many choices of vacations perfect for a fortnight of family fun and Relaxation</p>
-        <div className="d-grid d-flex flex-row gap-2 d-md-flex justify-content-center">
-          <button type="button" className="btn btn-info text-light fw-bold btn-lg px-4 me-md-2">Primary</button>
-          <button type="button " className="btn btn-outline-secondary btn-lg px-4 text-light">Default</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div className='container' >
+    <div className='bg-light'>
 
-    <div className="row row-cols-1 row-cols-md-3  mb-4 text-center mt-3 pt-4 flex-wrap">
-      <div key='free' className="col price ">
-        <div className="card mb-4 rounded-2 shadow-sm">
-          <div className="card-header py-3" style={{"background": "#2c3"}}>
-            <h4 className="my-0 fw-normal">Free</h4>
+<div className='App Hero bg-image d-flex align-items-center '>
+      <div className="opac-box"></div>
+      <div className="App-Hero mx-auto pb-4">
+        <div className={`"d-flex container-fluid row flex-lg-row-reverse g-5 p-0 m-0 " ${deadCenterStyle}`}>
+          {/* <div className=" col-10 col-sm-8 col-lg-6  position-relative">
+            <img src="https://www.travelscout24.de/wp-content/uploads/sites/14/Discount-Travel.jpg "
+            className="d-block mx-lg-auto img-fluid rounded-2" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
+            <img className={`${heroPics} pic1-hero`} src="https://www.travelmarvel.com.au/-/media/apt-responsive-website/miscellaneous/hero-panel-12-5/generic-12-5/hc-a-generic-map-travel-destinations-419995780-s-12-5.jpg?useCustomFunctions=1&rw=2280&w=1900&h=950&cropX=304&cropY=0" width="700" height="500" loading="lazy" alt="" />
+            <img className={`${heroPics} pic2-hero`} src="https://www.urtravelhelper.com/wp-content/uploads/2019/10/5ef595685c354e35adcf8137dcb963d9-1024x768.jpg" width="500" height="500" loading="lazy" alt="" />
+          </div> */}
+          <div className="col-lg-6 text-start hero-header ">
+            <h1 className="display-5 text-white fw-bold lh-1 mb-4 text-capitalize"><strong className='nabla fw-bold display-1'>Insane</strong><br/> travel madness</h1>
+            <p className="lead text-white fs-4 my-5 orbitron">Holidays, Theme parks Resorts and Viking-like cruises are just a few of the many choices of vacations perfect for a fortnight of family fun and Relaxation</p>
+            <div className="d-grid d-flex  gap-2 d-md-flex justify-content-center pt-4 mt-4 row row-cols-1 row-cols-sm-3">
+              <button type="button" className="hero-btn btn rounded-0  mx-auto fw-bold  btn-lg px-4 me-md-2">Primary</button>
+              <button type="button " className="hero-btn btn rounded-0  mx-auto  btn-lg px-4 ">Default</button>
+            </div>
+          </div>
+        </div>
+  </div>
+
+  </div>
+  
+<div className="container my-5 pt-4">
+   <div className="  row row-cols-1 row-cols-md-2 row-cols-lg-3  mb-4 text-center  flex-wrap">
+      <div key='free' className="col price  ">
+        <div className="card  mb-4 rounded-2 shadow-sm">
+          <div className="card-header py-3 bg-info text-light  border-info">
+            {/* <h4 className="my-0 fw-normal">Free</h4> */}
+            <h1 className="card-title pricing-card-title">£25<small style={{"font-size": "30px", 'opacity': '0.8'}} className="text-white fw-light  fs-5">/month</small></h1>
+            <p className='m-0 ' style={{'letter-spacing': '1px', 'font-weight': '300px', 'font-size': '1.1rem'}}> Easy Start to a new Adventure</p>
           </div>
           <div className="card-body">
-            <h1 className="card-title pricing-card-title">£125<small style={{"font-size": "30px"}} className="text-muted fw-light">/mo</small></h1>
             <ul className="list-unstyled mt-3 mb-4 text-start">
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> 2 weeks of activities</li>
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> includes 3 paid meals and free drinks</li>
@@ -59,31 +73,34 @@ export default function Home(props) {
           </div>
         </div>
       </div>
-      <div key='pro' className="col ">
-        <div className="card mb-4 rounded-0 rounded-bottom shadow border-bottom border-primary pop-tagDiv">
-          <div className="card-header p-0 overflow-hidden rounded-0 m-0">
-            <img className="image-cut " alt='pop-img' src='https://d3hne3c382ip58.cloudfront.net/files/uploads/bookmundi/resized/cmsfeatured/canary-islands-fuerteventura-1547025436-785X440.jpg'/>
+      <div key='pro' className="col price">
+        <div className="card  mb-4  shadow border-bottom border-primary pop-tagDiv">
+          <div className="card-header py-3 overflow-hidden rounded-0 m-0 text-bg-primary border-primary">
+            <h1 className="card-title pricing-card-title border-primary">£32<small style={{"font-size": "30px", 'opacity': '0.8'}}className="tex-white  fw-light fs-5">/month</small> <span className="inter rounded-pill fs-6 text-white bg-ocean py-1 px-2">50% off</span></h1>
+            <p className='m-0 ' style={{'letter-spacing': '1px', 'font-weight': '300px', 'font-size': '1.1rem'}}> Easy Start to a new Adventure</p>
+            
             <p className="sale">SALE</p>
           </div>
-          <div className="card-body p-0">
-            <h1 className="card-title pricing-card-title border-primary">£250<small style={{"font-size": "30px"}} className="text-info fw-light">/pp</small></h1>
-            {/* <ul className="list-unstyled mt-3 mb-4 text-start">
+          <div className="card-body ">
+            <ul className="list-unstyled mt-3 mb-4 text-start">
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> 2 weeks of activities</li>
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> includes 3 paid meals and free drinks</li>
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> Exectutive suite and full mini-bar</li>
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> travel to exquisite countries of the world</li>
             </ul>
-            <button type="button" className="w-75 btn btn-lg btn-primary" ><a className='text-bg-primary text-decoration-none' href="">Get started</a></button> */}
+            <button type="button" className="w-75 btn btn-lg btn-primary" ><a className='text-bg-primary text-decoration-none' href="/">Get started</a></button>
           </div>
         </div>
       </div>
-      <div key='enterprise' className="col price">
-        <div className="card mb-4 rounded-1 overflow-hidden shadow-sm border-primary">
-          <div className="card-header py-3 text-bg-primary  border-primary ">
-            <h4 className="my-0 fw-normal">Enterprise</h4>
+      <div key='enterprise' className="col price ">
+        <div className="card  mb-4 rounded-2 overflow-hidden shadow-sm ">
+          <div className="card-header py-3 bg-info text-light  border-info ">
+            <h1 className="card-title pricing-card-title">£32<small style={{"font-size": "30px", 'opacity': '0.8'}}className="tex-white  fw-light fs-5">/month</small></h1>
+            {/* <h4 className="my-0 fw-normal">Ultr</h4> */}
+            <p className='m-0 ' style={{'letter-spacing': '1px', 'font-weight': '300px', 'font-size': '1.1rem'}}> Easy Start to a new Adventure</p>
+
           </div>
           <div className="card-body">
-            <h1 className="card-title pricing-card-title">£<small style={{"font-size": "30px"}} className="text-muted fw-light">/mo</small></h1>
             <ul className="list-unstyled mt-3 mb-4 text-start">
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> 2 weeks of activities</li>
               <li><FontAwesomeIcon icon={faCheck} className="mx-2" style={{"color": "#2c3"}}/> includes 3 paid meals and free drinks</li>
@@ -95,8 +112,9 @@ export default function Home(props) {
         </div>
       </div>
     </div>
-
-    <h2 className={`display-6 ${darkMode && 'text-light'} text-center mb-4`}>Compare plans</h2>
+</div>
+ <div>
+       <h2 className='display-6 text-center my-5'>Compare plans</h2>
 
     <div className="table-responsive container bg-white shadow-sm rounded">
       <table className="table text-center">
@@ -159,16 +177,20 @@ export default function Home(props) {
         </tbody> */}
       </table>
     </div>
-  </div>
+    </div>
+    <hr />
+
   <div class="d-flex flex-md-equal py-3 my-md-3 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xxl-5 g-3 mx-0 justify-content-center">
-    <div class="bg-light me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden">
-      <div class="my-3 ">
+    <div class={`${deadCenterStyle}d-flex flex-column bg-light me-md-3 py-3 px-3 pt-md-3 px-md-5 text-center overflow-hidden position-sticky`}>
+        <p className='new'>NEW</p>
+      <div class="my-3  ">
         <h2 class="display-4 esd preview-title">Entertainment</h2>
         {/* <p class="lead">Laugh, cry, enjoy your selves in severals different ways</p> */}
       </div>
 
       <img style={{"width":"80%", "height": "35%",}} className="rounded-4 image-adjust" src="https://res.cloudinary.com/dfbe6xcrt/image/upload/w_1100,h_675,c_fill/expose/iconinc/images/iconincs-cinema-friends-watching-movie.jpg" alt="img" />
-      <img style={{"width":"35%", "height": "35%"}} className="rounded-4 m-2  image-adjust" src="https://ichef.bbci.co.uk/images/ic/640x360/p02vmp73.jpg" alt="img" />
+
+      <img style={{"width":"35%", "height": "35%"}} className="rounded-4 m-2  image-adjust" src="https://ichef.bbci.co.uk/images/ic/640x360/p02vmp73.jpg" alt="img"></img>
       <img style={{"width":"35%", "height": "35%"}} className="rounded-4 m-2  image-adjust" src="https://ichef.bbci.co.uk/images/ic/640x360/p02vmp73.jpg" alt="img" />
 
     </div>
@@ -209,19 +231,9 @@ export default function Home(props) {
       {/* <div class="bg-light shadow-sm mx-auto" style={{"width":"80%", "height": "300px", "border-radius": "21px 21px 0 0"}}></div> */}
     </div>
   </div>
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+       
     </div>
+    
   );
 }
 

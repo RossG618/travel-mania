@@ -35,7 +35,7 @@
 .pass-bar{
     border-radius: 0 0 0 0.375rem !important;
 }
-.rog-font{
-    font-family:'rog fonts', 'copperplate gothic', 'Orbitron', 'Alfa Slab One', 'Anton';
-    
+
+.vh-90{
+    height: 90vh !important;
 }

@@ -1,9 +1,11 @@
 :root{
     --blood-red: rgb(185, 0, 0);
+    --ocean-blue: rgb(50, 0, 180)
 }
 /* .App-Hero .btn{
     font-family: Arial, Helvetica, sans-serif !important;
 } */
+
 .App{
     z-index: 90;
     position: sticky;
@@ -14,23 +16,24 @@
     background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-@media screen and(min-width: 768px){
 
-    .preview-title{
-        font-size: 12px !important;
-    }
-}
 header .btn:hover,
 .btn-shadow:hover
 {
     /* box-shadow: 0 0 1em 5em rgba(0,0,0,0.5); */
     box-shadow: 0 0 0.5em 0.5em rgba(0,0,0,0.5);
 }
-.rog-font{
-    font-family:'rog fonts', 'copperplate gothic', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.btn-shadow-sm:hover
+{
+    /* box-shadow: 0 0 1em 5em rgba(0,0,0,0.5); */
+    box-shadow: 0 0 0.5em 0.2em rgba(0,0,0,0.5);
 }
+
 .bg-blood{
     background-color: var(--blood-red);
+}
+.bg-ocean{
+    background-color: var(--ocean-blue);
 }
 /* @font-face {
     font-family: "nabla";
@@ -39,20 +42,45 @@ header .btn:hover,
     font-family: "bebas";
     src: url(./fonts/Bebas_Neue.ttf);
 } */
+.rog-font{
+    font-family:'rog fonts', 'copperplate gothic', 'Orbitron', 'Alfa Slab One', 'Anton' !important;
+    
+}
 .nabla{
-    font-family: 'nabla';
+    font-family: 'nabla' !important;
 }
 .esd{
-    font-family: 'East Sea Dokdo';
+    font-family: 'East Sea Dokdo' !important;
+}
+.bebas{
+    font-family: 'Bebas Neue' !important;
+}
+.orbitron{
+    font-family: 'Orbitron' !important;
+}
+.inter{
+    font-family: 'Inter';
+}
+.exo{
+    font-family: 'Exo';
 }
 *{
-    font-family: Arial, Helvetica, sans-serif ;
+    font-family: 'Inter', 'Arial', 'Helvetica', 'sans-serif';
 }
-body{
-    z-index: 100;
+
+.bg-image{
+   background-size:  cover;
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/alpe-di-siusi-sunrise-with-sassolungo-or-langkofel-royalty-free-image-1623254127.jpg);
+background-position: center;
+
+ /* background: #282c34; */
 }
-.Hero{
-    background: #282c34;
+.opac-box{
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 .pic1-hero{
 top: -100px;
@@ -81,22 +109,24 @@ transform: scale(0.7);
 
 .price{
     transition: all 0.5s;
+    width: 50%;
+}
+.price-norm{
+    opacity: 0.8;
+}
+.price-norm:hover{
+    opacity: 1;
 }
 
-.pop-tag{
-    color: red  ;
-    top: -18px;
-    transition: all 0.6s;
-    right: -19px;
-}
-.pop-tagDiv:hover .pop-tag{
-    transform: translate(0px, 20px) scale(1.5) rotate(350deg)  !important;
-    transition: all 0.6s;
-}
+/* .pop-tagDiv:hover{
+    transform: translate(0px, 20px) scale(1.5) rotate(360deg)  !important;
+    transition: all 0.8s ease-in-out;
+    z-index: 600 !important;
+} */
 
 .pop-tagDiv{
-    transform: scale(1.2) translate(0, 20px);
-    z-index: 33;
+    /* transform: scale(1.2) translate(0, 20px); */
+    /* z-index: 33; */
     overflow: hidden;
 }
 @media screen and (max-width: 1080px){
@@ -145,7 +175,7 @@ right: 90px;
 }
 @media screen and (min-width:1442px ){
     .Hero{
-        height: 40rem ;
+        height: 100vh ;
     }
 }
 .image-cut{
@@ -156,9 +186,9 @@ right: 90px;
 .image-adjust{
     object-fit: cover;
 }
-.sold_out {
-    top: 2em;
-    left: -4em;
+.new {
+    top: 1em;
+    right: -3.9em;
     color: #fff;
     display: block;
     position:absolute;
@@ -166,24 +196,25 @@ right: 90px;
     text-decoration: none;
     letter-spacing: .06em;
     background-color: #A00;
+    
     padding: 0.5em 5em 0.4em 5em;
     text-shadow: 0 0 0.75em #444;
     box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
     font: bold 16px/1.2em Arial, Sans-Serif;
     -webkit-text-shadow: 0 0 0.75em #444;
     -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,0.5);
-    transform: rotate(-45deg) scale(0.75,1);
-    -webkit-transform: rotate(-45deg) scale(0.75,1);
+    transform: rotate(45deg) scale(0.75,1);
+    -webkit-transform: rotate(45deg) scale(0.95,1.2);
     z-index:10;
 }
-.sold_out:before {
+.new:before {
     content: '';
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     position: absolute;
-    margin: -0.3em -5em;
+    margin: -0.4em -3.2em;
     transform: scale(0.7);
     -webkit-transform: scale(0.7);
     border: 2px rgba(255,255,255,0.7) dashed;
@@ -221,3 +252,15 @@ right: 90px;
     -webkit-transform: scale(0.7);
     border: 2px rgba(255,255,255,0.7) dashed;
 }
+.hero-btn{
+    border: solid  2px #3c2 !important ;
+    color: #3c2 !important;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.4) !important;
+  }
+.hero-btn:hover{
+    border: dashed  2px #3c2 !important ;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0) !important;
+
+  }

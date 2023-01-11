@@ -1,1 +1,1 @@
-export const userInfo = []
+export const userInfo = [];
